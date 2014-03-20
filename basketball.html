@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Badger Basketball</title>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+
+ <link href="popup.css" rel="stylesheet" type="text/css" />
+ <style>
+ body {
+ min-width: 520px;
+    width: 520px;
+    overflow-x: hidden;
+ font-size:12px;line-height:15px;font-family:adelle,georgia
+  }
+ </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+ <div id="logo">
+ <img src="header_icon.png" style="border-style: none" alt="UW Logo">
+ </div>
+ <div id="top_info">
+ <h2>Badger Basketball</h2>
+ <h4>B1G: 4th</h4> 
+ <h4>Record: 16-2 Conference Record: 3-2</h4></br>
+ </div>
+ <div id="nav">
+	<a href="popup.html">Football <img src="football.png" style="border-style: none" alt="Football Logo"></a><br /> 
+	<a href="basketball.html">Basketball <img src="basketball.png" style="border-style: none" alt="Basketball Logo"></a><br /> 
+	<a href="hockey.html">Hockey <img src="hockey.png" style="border-style: none" alt="Hockey Logo"></a></br>
+ </div>
+ <table id="teamtable" class="tablesorter">
+ <thead>
+  <tr>
+	<th>Date</th> 
+	<th>Opponent</th> 
+	<th>Location</th>
+	<th>Network</th>
+	<th>Time/Result (CST)</th> 
+ </tr>
+ </thead>
+ <tbody>
+  <tr>
+	<td>11/8/13</td> 
+	<td>St. John's</td>
+	<td>Sioux Falls, SD</td>
+	<td>BTN</td> 
+	<td><FONT COLOR="00cc00">W 86-75</font></td> 
+ </tr>
+  <tr>
+	<td>11/12/13</td> 
+	<td>Florida</td>
+	<td>Kohl Center</td>
+	<td>ESPN2</td> 
+	<td><FONT COLOR="00cc00">W 59-53</font></td> 
+ </tr>
+  <tr>
+	<td>11/16/13</td> 
+	<td>UW Green Bay</td>
+	<td>Green bay, WI</td>
+	<td>WISC-TV</td> 
+	<td><FONT COLOR="00cc00">W 69-66</font></td> 
+ </tr>
+  <tr>
+	<td>11/19/13</td> 
+	<td>North Dakota</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td><FONT COLOR="00cc00">W 103-85</font></td> 
+ </tr>
+  <tr>
+	<td>11/21/13</td> 
+	<td>Bowling Green</td>
+	<td>Kohl Center</td>
+	<td>ESPN3</td> 
+	<td><FONT COLOR="00cc00">W 88-64</font></td> 
+ </tr>
+  <tr>
+	<td>11/23/13</td> 
+	<td>Oral Roberts</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td><FONT COLOR="00cc00">W 76-67</font></td> 
+ </tr>
+  <tr>
+	<td>11/26/13</td> 
+	<td>Saint Louis</td>
+	<td>Playa del Carmen, Mexico</td>
+	<td>CBS Sports Network</td> 
+	<td><FONT COLOR="00cc00">W 63-57</font></td> 
+ </tr>
+  <tr>
+	<td>11/27/13</td> 
+	<td>West Virginia/Old Dominion</td>
+	<td>Playa del Carmen, Mexico</td>
+	<td>CBS Sports Network</td> 
+	<td><FONT COLOR="00cc00">W 70-63</font></td> 
+ </tr>
+  <tr>
+	<td>12/04/13</td> 
+	<td>Virginia</td>
+	<td>Charlottesville, VA</td>
+	<td>ESPN/ESPN2</td> 
+	<td><FONT COLOR="00cc00">W 48-38</font></td> 
+ </tr>
+  <tr>
+	<td>12/07/13</td> 
+	<td>Marquette</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td><FONT COLOR="00cc00">W 70-64</font></td> 
+ </tr>
+  <tr>
+	<td>12/11/13</td> 
+	<td>UW Milwaukee</td>
+	<td>Kohl Center</td>
+	<td>BTN.com</td> 
+	<td><FONT COLOR="00cc00">W 78-52</font></td> 
+ </tr>
+  <tr>
+	<td>12/14/13</td> 
+	<td>Eastern Kentucky</td>
+	<td>Kohl Center</td>
+	<td>ESPN3</td> 
+	<td><FONT COLOR="00cc00">W 86-61</font></td> 
+ </tr>
+  <tr>
+	<td>12/28/13</td> 
+	<td>Prairie View A&M</td>
+	<td>Kohl Center</td>
+	<td>ESPNU</td> 
+	<td><FONT COLOR="00cc00">W 80-43</font></td> 
+ </tr> 
+  <tr>
+	<td>1/02/14</td> 
+	<td>Northwestern</td>
+	<td>Evanston, IL</td>
+	<td>ESPN2</td> 
+	<td><FONT COLOR="00cc00">W 76-49</font></td> 
+ </tr> 
+  <tr>
+	<td>1/05/14</td> 
+	<td>Iowa</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td><FONT COLOR="00cc00">W 75-71</font></td> 
+ </tr>  
+  <tr>
+	<td>1/08/14</td> 
+	<td>Illinois</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td><FONT COLOR="00cc00">W 95-70</font></td> 
+ </tr>  
+  <tr>
+	<td>1/14/14</td> 
+	<td>Indiana</td>
+	<td>Bloomington, IN</td>
+	<td>ESPN</td> 
+	<td><FONT COLOR="cc3300">L 75-72</font></td> 
+ </tr>   
+  <tr>
+	<td>1/18/14</td> 
+	<td>Michigan</td>
+	<td>Kohl Center</td>
+	<td>ESPN</td> 
+	<td><FONT COLOR="cc3300">L 77-70</font></td> 
+ </tr>   
+  <tr>
+	<td>1/22/14</td> 
+	<td>Minnesota</td>
+	<td>Minneapolis, MN</td>
+	<td>BTN</td> 
+	<td>8:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>1/25/14</td> 
+	<td>Purdue</td>
+	<td>West Lafayette, IN</td>
+	<td>BTN</td> 
+	<td>4:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>1/29/14</td> 
+	<td>Northwestern</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td>8:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>2/01/14</td> 
+	<td>Ohio State</td>
+	<td>Kohl Center</td>
+	<td>ESPN/ESPN2</td> 
+	<td>11:00 a.m</td> 
+ </tr>   
+  <tr>
+	<td>2/04/14</td> 
+	<td>Illinois</td>
+	<td>Champaign, IL</td>
+	<td>BTN</td> 
+	<td>8:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>2/09/14</td> 
+	<td>Mighigan State</td>
+	<td>Kohl Center</td>
+	<td>CBS</td> 
+	<td>12:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>2/13/14</td> 
+	<td>Minnesota</td>
+	<td>Kohl Center</td>
+	<td>ESPN/ESPN2</td> 
+	<td>8:00 p.m</td> 
+ </tr>   
+   <tr>
+	<td>2/16/14</td> 
+	<td>Michigan</td>
+	<td>Ann Arbor, MI</td>
+	<td>CBS</td> 
+	<td>12:00 p.m</td> 
+ </tr>  
+  <tr>
+	<td>2/22/14</td> 
+	<td>Iowa</td>
+	<td>Iowa City, Iowa</td>
+	<td>ESPN/ESPN2</td> 
+	<td>11:00 a.m</td> 
+ </tr>   
+  <tr>
+	<td>2/25/14</td> 
+	<td>Indiana</td>
+	<td>Kohl Center</td>
+	<td>ESPN</td> 
+	<td>8:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>3/02/14</td> 
+	<td>Penn State</td>
+	<td>University Park, PA</td>
+	<td>CBS/BTN</td> 
+	<td>11:00 a.m</td> 
+ </tr>   
+  <tr>
+	<td>3/05/14</td> 
+	<td>Purdue</td>
+	<td>Kohl Center</td>
+	<td>BTN</td> 
+	<td>8:00 p.m</td> 
+ </tr>   
+  <tr>
+	<td>3/09/14</td> 
+	<td>Nebraska</td>
+	<td>Lincoln, NE</td>
+	<td>BTN</td> 
+	<td>4:15 p.m</td> 
+ </tr>   
+</tbody>
+ </table>
+ <p>Information may change.</p>
+  </body>
+</html
